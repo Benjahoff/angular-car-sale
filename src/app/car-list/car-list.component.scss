@@ -1,0 +1,44 @@
+.extraCont {
+  height: 40px !important;
+  font-size: small;
+  text-align: center;
+}
+.quantity {
+  padding-top: 20px;
+  margin-right: 60px;
+  width: 100%;
+  text-align: center;
+  margin: 6px 0;
+}
+button[class*=btn] {
+    width: 30px;
+    height: 30px;
+    background-color: #E1E8EE;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+  }
+.plus-btn img {
+    margin: auto;
+}
+.minus-btn img {
+    margin: auto;
+}
+.quantity input {
+  -webkit-appearance: none;
+  border: none;
+  text-align: center;
+  width: 32px;
+  font-size: 16px;
+  color: #43484d;
+  font-weight: 300;
+}
+.buttons {
+  position: relative;
+  padding-top: 30px;
+  margin-right: 60px;
+}
+button:focus,
+input:focus {
+  outline:0;
+}

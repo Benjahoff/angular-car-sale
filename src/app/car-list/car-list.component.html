@@ -1,44 +1,24 @@
-<table>
-    <thead>
-        <tr>
-            <td>Marca</td>
-            <td>Modelo</td>
-            <td>Nombre</td>
-            <td>Kilometros</td>
-            <td>Imagen</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>{{car.marca}}</td>
-            <td>{{car.nombre}}</td>
-            <td>{{car.modelo}}</td>
-            <td>{{car.km}}</td>
-            <td><img [src]=car.img alt=""></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
+<div class="container">
+  <div class="row row-cols-3">
+    <div class="col mb-4 shadow-sm" *ngFor="let pc of pcs">
+      <img [src]="pc.img" [alt]="pc.marca" class= "img-fluid">
+      <div class="card-body">
+        <p class="card-text">{{pc.marca}} {{pc.procesador}} {{pc.memoria}} {{pc.placaVideo}} {{pc.almacenamiento}} {{pc.fuente}} {{pc.gabinete}} </p>
+        <p class="card-text">Precio : {{pc.precio}}<!--  <span class="text-warning" *ngIf="product.ofert"> OFERTA</span> -->
+        </p>
+        <div class="extraCont alert alert-info rounded-pill border border-primary" *ngIf="pc.extra != null">
+          <p class="extra">{{pc.extra}}</p>
+        </div>
+        <div class="quantity">
+          <button class="plus-btn" type="button" name="button">
+            <img src="../../assets/plus.svg" alt="" />
+          </button>
+          <input type="text" name="name" value="1">
+          <button class="minus-btn" type="button" name="button">
+            <img src="../../assets/minus.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
