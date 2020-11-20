@@ -101,7 +101,7 @@ export class CarListComponent implements OnInit {
     almacenamiento: "1tb",
     fuente: "600w rgb",
     gabinete :"ATX SENTEY F10 RGB",
-    extra: "teclado y mouse",
+    extra: null,
     precio: 56.9999,
     stock: 12,
     cantidad: 0,
@@ -121,5 +121,8 @@ export class CarListComponent implements OnInit {
     if(pc.cantidad > 0){
       pc.cantidad--;
     }
+  }
+  onChangeQuantity(event, pc:PC): void{
+    console.log(event)
   }
 }

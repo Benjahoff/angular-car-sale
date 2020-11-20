@@ -10,11 +10,11 @@
           <p class="extra">{{pc.extra}}</p>
         </div>
         <div class="quantity">
-          <button class="plus-btn" type="button" name="button">
+          <button class="plus-btn" type="button" (click)="upQuantity(pc)" name="button">
             <img src="../../assets/plus.svg" alt="" />
           </button>
-          <input type="text" name="name" value="1">
-          <button class="minus-btn" type="button" name="button">
+          <input type="number" (onchange)="onChangeQuantity($event,pc)" name="name" value="{{pc.cantidad}}">
+          <button class="minus-btn" type="button" (click)="downQuantity(pc)" name="button">
             <img src="../../assets/minus.svg" alt="" />
           </button>
         </div>
