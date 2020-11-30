@@ -3,23 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CarListComponent } from './car-list/car-list.component';
-
-import { FormsModule } from '@angular/forms';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductsCartComponent } from './products-cart/products-cart.component';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
+import { ProductsHomeComponent } from './products-home/products-home.component';
 import { StoreAboutComponent } from './store-about/store-about.component';
-import { PruductsComponent } from './pruducts/pruducts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CarListComponent,
-    StoreAboutComponent,
-    PruductsComponent,
+    ProductListComponent,
+    ProductsCartComponent,
+    InputIntegerComponent,
+    ProductsHomeComponent,
+    StoreAboutComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

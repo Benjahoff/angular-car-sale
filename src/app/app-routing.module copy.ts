@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProductsHomeComponent } from './products-home/products-home.component';
 import { StoreAboutComponent } from './store-about/store-about.component';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -19,6 +20,7 @@ const routes: Routes = [
   },
 
 ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row row-cols-3">
+      <div class="col mb-4 shadow-sm" *ngFor="let pc of pcs">
+        <img [src]="pc.img" [alt]="pc.marca" class= "img-fluid imagen">
+        <div class="card-body">
+          <div class="row">
+            <p class="card-text">{{pc.marca}} {{pc.procesador}} {{pc.memoria}} {{pc.placaVideo}} {{pc.almacenamiento}} {{pc.fuente}} {{pc.gabinete}} </p>
+            <p class="card-text">Precio : {{pc.precio}}<span class="text-warning" *ngIf="pc.stock == 1"> ULTIMA</span></p>
+          </div>
+          <div class="row">
+            <span class="text-primary" *ngIf="pc.extra != null"> EXTRA : {{pc.extra}}</span>
+          </div>
+          <div class="row ">
+              <app-input-integer [(cantidad)]="pc.cantidad" [max]="pc.stock" (maxReached)="maxReached($event)">  </app-input-integer>       
+              <button class="btn" (click)="addToCart(pc)">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
