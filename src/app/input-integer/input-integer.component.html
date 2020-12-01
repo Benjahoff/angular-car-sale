@@ -2,7 +2,7 @@
     <button class="plus-btn" type="button" (click)="upQuantity()" name="button">
         <img src="../../assets/plus.svg" alt="" />
     </button>
-    <input type="number" (onchange)="onChangeQuantity($event)" name="name" value="{{cantidad}}">
+    <input type="number" (keyup)="onChangeQuantity($event)" name="name" value="{{cantidad}}">
     <button class="minus-btn" type="button" (click)="downQuantity()" name="button">
         <img src="../../assets/minus.svg" alt="" />
     </button>

@@ -24,7 +24,6 @@ export class InputIntegerComponent implements OnInit {
   ngOnInit(): void {
   }
   upQuantity(): void{
-    console.log(this.max)
     if(this.cantidad < this.max){
       this.cantidad++;
       this.cantidadChange.emit(this.cantidad);
@@ -39,6 +38,10 @@ export class InputIntegerComponent implements OnInit {
     }
   }
   onChangeQuantity(event): void{
-    console.log(event)
+    if (event.target.value > this.max){
+      this.maxReached.emit('No disponemos de suficiente stock');
+      this.cantidad = this.max;
+      this.cantidadChange.emit(this.cantidad);
+    }
   }
 }
